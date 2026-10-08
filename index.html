@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boopathi U | Cloud & DevOps Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Boopathi U — B.Tech Student, Cloud & DevOps Enthusiast, and Backend Developer building practical infrastructure with AWS, Docker, Jenkins, Terraform, and Kubernetes.">
+    <meta name="keywords" content="Boopathi U, Cloud, DevOps, AWS, Docker, Kubernetes, Jenkins, Terraform, Portfolio, Backend Developer, Chennai">
+    <meta name="author" content="Boopathi U">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Boopathi U | Cloud & DevOps Portfolio">
+    <meta property="og:description" content="I build things that actually run. Cloud × DevOps × Software.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Space Grotesk + Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Interactive Mouse Glow Background -->
+    <div class="ambient-glow" id="ambientGlow" aria-hidden="true"></div>
+    <div class="cyber-grid" aria-hidden="true"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Boopathi U Homepage">
+                <span class="brand-bracket">&lt;</span>
+                <span class="brand-name">BU</span>
+                <span class="brand-slash">/</span>
+                <span class="brand-bracket">&gt;</span>
+                <span class="brand-tag">cloud.devops</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#achievements" class="nav-link">Journey</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link nav-cta-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Controls (Theme Toggle & Mobile Menu) -->
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+                    <span class="theme-icon sun-icon">☀️</span>
+                    <span class="theme-icon moon-icon">🌙</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==============================================================
+             HERO SECTION
+             ============================================================== -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <!-- Left Hero Content -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-beacon"></span>
+                        <span class="badge-text">Available for Internships &amp; Opportunities</span>
+                    </div>
+
+                    <p class="hero-subtitle">Cloud × DevOps × Software</p>
+                    <h1 class="hero-headline">
+                        I build things that <br>
+                        <span class="gradient-text">actually run.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        I'm <strong>Boopathi U</strong>, a B.Tech student turning cloud and DevOps concepts into hands-on projects with 
+                        <span class="tech-highlight">AWS</span>, 
+                        <span class="tech-highlight">Docker</span>, 
+                        <span class="tech-highlight">Jenkins</span>, 
+                        <span class="tech-highlight">Terraform</span> and 
+                        <span class="tech-highlight">Kubernetes</span>.
+                    </p>
+
+                    <!-- Hero CTA Buttons -->
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Projects</span>
+                            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="https://github.com/boopathi-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+
+                    <!-- Animated Hero Metrics -->
+                    <div class="hero-metrics">
+                        <div class="metric-card">
+                            <div class="metric-number"><span class="counter" data-target="10">10</span>+</div>
+                            <div class="metric-label">Days DevOps Practice</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number"><span class="counter" data-target="5">5</span></div>
+                            <div class="metric-label">Featured Projects</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number"><span class="counter" data-target="4">4</span></div>
+                            <div class="metric-label">Credentials</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Visual: Futuristic Cloud/DevOps Orbital Visual -->
+                <div class="hero-visual">
+                    <div class="visual-canvas-wrapper">
+                        <!-- Holographic Ring & Center Terminal -->
+                        <div class="orbit-center">
+                            <div class="orbit-glow-core"></div>
+                            <div class="orbit-center-icon">
+                                <span class="core-symbol">☁️</span>
+                                <span class="core-text">CLOUD / DEVOPS</span>
+                            </div>
+                        </div>
+
+                        <!-- Orbit Path 1 -->
+                        <div class="orbit-ring orbit-ring-1"></div>
+                        <!-- Orbit Path 2 -->
+                        <div class="orbit-ring orbit-ring-2"></div>
+
+                        <!-- Floating Tech Nodes -->
+                        <div class="floating-node node-aws" style="--delay: 0s;">
+                            <div class="node-icon">☁️</div>
+                            <div class="node-info">
+                                <span class="node-name">AWS</span>
+                                <span class="node-sub">Cloud Infra</span>
+                            </div>
+                            <span class="node-pulse"></span>
+                        </div>
+
+                        <div class="floating-node node-docker" style="--delay: 1.2s;">
+                            <div class="node-icon">🐳</div>
+                            <div class="node-info">
+                                <span class="node-name">Docker</span>
+                                <span class="node-sub">Containers</span>
+                            </div>
+                            <span class="node-pulse"></span>
+                        </div>
+
+                        <div class="floating-node node-jenkins" style="--delay: 2.4s;">
+                            <div class="node-icon">⚙️</div>
+                            <div class="node-info">
+                                <span class="node-name">Jenkins</span>
+                                <span class="node-sub">CI / CD</span>
+                            </div>
+                            <span class="node-pulse"></span>
+                        </div>
+
+                        <div class="floating-node node-k8s" style="--delay: 3.6s;">
+                            <div class="node-icon">☸️</div>
+                            <div class="node-info">
+                                <span class="node-name">Kubernetes</span>
+                                <span class="node-sub">Orchestration</span>
+                            </div>
+                            <span class="node-pulse"></span>
+                        </div>
+
+                        <div class="floating-node node-terraform" style="--delay: 4.8s;">
+                            <div class="node-icon">📐</div>
+                            <div class="node-info">
+                                <span class="node-name">Terraform</span>
+                                <span class="node-sub">IaC Pipeline</span>
+                            </div>
+                            <span class="node-pulse"></span>
+                        </div>
+
+                        <!-- Terminal Telemetry Card -->
+                        <div class="hero-terminal-card">
+                            <div class="terminal-dots">
+                                <span class="dot dot-r"></span>
+                                <span class="dot dot-y"></span>
+                                <span class="dot dot-g"></span>
+                                <span class="term-title">pipeline.status</span>
+                            </div>
+                            <div class="terminal-code">
+                                <code>$ terraform apply --auto-approve</code>
+                                <p class="terminal-success">✔ Infrastructure Provisioned [AWS + K8s]</p>
+                                <p class="terminal-status"><span class="blink-dot">●</span> 5 active containers running</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             ABOUT SECTION
+             ============================================================== -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 01. ABOUT ME</span>
+                    <h2 class="section-title">Curious student. Practical builder.</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-panel">
+                        <div class="about-text">
+                            <p class="about-paragraph highlight-lead">
+                                I'm an aspiring Cloud and IT professional with hands-on backend development experience and a growing focus on cloud infrastructure and DevOps.
+                            </p>
+                            <p class="about-paragraph">
+                                My learning style is simple: <em>understand the concept, build it, break it, fix it, and document it</em>. My GitHub portfolio reflects that journey.
+                            </p>
+                        </div>
+
+                        <!-- Badges -->
+                        <div class="about-badges">
+                            <div class="info-badge">
+                                <span class="badge-icon">📍</span>
+                                <div>
+                                    <span class="badge-sub">Location</span>
+                                    <strong class="badge-main">Chennai, Tamil Nadu</strong>
+                                </div>
+                            </div>
+                            <div class="info-badge">
+                                <span class="badge-icon">🎓</span>
+                                <div>
+                                    <span class="badge-sub">Status</span>
+                                    <strong class="badge-main">B.Tech Student</strong>
+                                </div>
+                            </div>
+                            <div class="info-badge">
+                                <span class="badge-icon">☁️</span>
+                                <div>
+                                    <span class="badge-sub">Focus Area</span>
+                                    <strong class="badge-main">Cloud Computing</strong>
+                                </div>
+                            </div>
+                            <div class="info-badge">
+                                <span class="badge-icon">💡</span>
+                                <div>
+                                    <span class="badge-sub">Mindset</span>
+                                    <strong class="badge-main">Problem Solving</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Philosophy Box -->
+                    <div class="about-philosophy glass-panel">
+                        <div class="philosophy-header">
+                            <span class="bracket-symbol">&gt;_</span>
+                            <h3>The DevOps Mindset</h3>
+                        </div>
+                        <ul class="philosophy-list">
+                            <li>
+                                <div class="step-num">01</div>
+                                <div>
+                                    <h4>Hands-On Experimentation</h4>
+                                    <p>Spinning up real containers, clusters, and AWS resources instead of staying only theoretical.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-num">02</div>
+                                <div>
+                                    <h4>Automation First</h4>
+                                    <p>From manual steps to automated CI/CD pipelines with Jenkins and Infrastructure as Code with Terraform.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-num">03</div>
+                                <div>
+                                    <h4>Iterative Progression</h4>
+                                    <p>Structured daily practice tracking Git, Docker, networking, cloud configuration, and scaling.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             TECHNICAL SKILLS SECTION
+             ============================================================== -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 02. TECHNICAL ARSENAL</span>
+                    <h2 class="section-title">Skills &amp; Practice Breakdown</h2>
+                    <p class="section-subtitle">
+                        * Skill bars represent hands-on practice &amp; project application level, reflecting continuous learning rather than static ratings.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- AWS Card -->
+                    <div class="skill-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box aws-theme">☁️</div>
+                            <div>
+                                <h3 class="skill-title">AWS</h3>
+                                <span class="skill-category">Cloud Infrastructure</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">IAM</span>
+                            <span class="tag">EC2</span>
+                            <span class="tag">VPC</span>
+                            <span class="tag">S3</span>
+                            <span class="tag">AWS CLI</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="meter-info">
+                                <span>Hands-on Practice Level</span>
+                                <span class="meter-pct">80%</span>
+                            </div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="--level: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Docker Card -->
+                    <div class="skill-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box docker-theme">🐳</div>
+                            <div>
+                                <h3 class="skill-title">Docker</h3>
+                                <span class="skill-category">Containerization</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Images</span>
+                            <span class="tag">Containers</span>
+                            <span class="tag">Docker Compose</span>
+                            <span class="tag">Volumes</span>
+                            <span class="tag">Bind Mounts</span>
+                            <span class="tag">Networking</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="meter-info">
+                                <span>Hands-on Practice Level</span>
+                                <span class="meter-pct">85%</span>
+                            </div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="--level: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jenkins Card -->
+                    <div class="skill-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box jenkins-theme">⚙️</div>
+                            <div>
+                                <h3 class="skill-title">Jenkins</h3>
+                                <span class="skill-category">CI/CD Automation</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Git Integration</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">Docker Builds</span>
+                            <span class="tag">GHCR</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="meter-info">
+                                <span>Hands-on Practice Level</span>
+                                <span class="meter-pct">75%</span>
+                            </div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="--level: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terraform Card -->
+                    <div class="skill-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box terraform-theme">📐</div>
+                            <div>
+                                <h3 class="skill-title">Terraform</h3>
+                                <span class="skill-category">Infrastructure as Code</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">IaC</span>
+                            <span class="tag">AWS Provider</span>
+                            <span class="tag">Plan</span>
+                            <span class="tag">Apply</span>
+                            <span class="tag">Destroy</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="meter-info">
+                                <span>Hands-on Practice Level</span>
+                                <span class="meter-pct">75%</span>
+                            </div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="--level: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kubernetes Card -->
+                    <div class="skill-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box k8s-theme">☸️</div>
+                            <div>
+                                <h3 class="skill-title">Kubernetes</h3>
+                                <span class="skill-category">Orchestration &amp; Scaling</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Minikube</span>
+                            <span class="tag">Pods</span>
+                            <span class="tag">Deployments</span>
+                            <span class="tag">Services</span>
+                            <span class="tag">NodePort</span>
+                            <span class="tag">Scaling</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="meter-info">
+                                <span>Hands-on Practice Level</span>
+                                <span class="meter-pct">70%</span>
+                            </div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="--level: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Programming Card -->
+                    <div class="skill-card glass-panel">
+                        <div class="skill-header">
+                            <div class="skill-icon-box code-theme">💻</div>
+                            <div>
+                                <h3 class="skill-title">Programming</h3>
+                                <span class="skill-category">Languages &amp; Backend</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag highlight-tag">C</span>
+                            <span class="tag highlight-tag">C++</span>
+                            <span class="tag highlight-tag">Python</span>
+                            <span class="tag">Backend Development</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="meter-info">
+                                <span>Hands-on Practice Level</span>
+                                <span class="meter-pct">80%</span>
+                            </div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" style="--level: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             PROJECTS SECTION
+             ============================================================== -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 03. HANDS-ON WORK</span>
+                    <h2 class="section-title">Featured Projects &amp; Repositories</h2>
+                    <p class="section-subtitle">Real code, running containers, and practical cloud experiments.</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls" role="tablist">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">ALL</button>
+                    <button class="filter-btn" data-filter="cloud" role="tab" aria-selected="false">CLOUD</button>
+                    <button class="filter-btn" data-filter="devops" role="tab" aria-selected="false">DEVOPS</button>
+                    <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">BACKEND</button>
+                    <button class="filter-btn" data-filter="ideas" role="tab" aria-selected="false">IDEAS</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projectsGrid">
+                    
+                    <!-- PROJECT 1: FEATURED -->
+                    <article class="project-card featured-project glass-panel" data-category="cloud devops">
+                        <div class="project-badge-featured">⭐ FEATURED REPOSITORY</div>
+                        <div class="project-header">
+                            <div class="project-cat-pill">Cloud + DevOps</div>
+                            <h3 class="project-title">Cloud &amp; DevOps — 12 Day Practice</h3>
+                        </div>
+                        <p class="project-desc">
+                            My main learning portfolio covering Git &amp; GitHub, Docker, Apache, Docker Compose, networking, Jenkins, Terraform, AWS IAM/EC2/VPC and Kubernetes. A structured hands-on portfolio documenting my complete learning progression.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">Git</span>
+                            <span class="tech-pill">GitHub</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">Jenkins</span>
+                            <span class="tech-pill">Terraform</span>
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Kubernetes</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/boopathi-art/cloud-devops-12-days" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>View GitHub Repository</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: CALCULATOR CI/CD -->
+                    <article class="project-card glass-panel" data-category="devops">
+                        <div class="project-header">
+                            <div class="project-cat-pill">CI/CD + Containers</div>
+                            <h3 class="project-title">Calculator — Jenkins + Docker + GHCR</h3>
+                        </div>
+                        <p class="project-desc">
+                            Containerized calculator application with Jenkins automation, Docker image builds, GHCR publishing and an AWS deployment workflow.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">Jenkins</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">GHCR</span>
+                            <span class="tech-pill">Terraform</span>
+                            <span class="tech-pill">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/boopathi-art/calculator" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>GitHub Repository</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3: DJANGO BACKEND -->
+                    <article class="project-card glass-panel" data-category="backend devops">
+                        <div class="project-header">
+                            <div class="project-cat-pill">Backend + Docker</div>
+                            <h3 class="project-title">Django Docker Backend</h3>
+                        </div>
+                        <p class="project-desc">
+                            Built a Django backend and containerized it with Docker. The project demonstrates Python, Django, REST API and container fundamentals.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">Django</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/boopathi-art/django-docker-backend" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>GitHub Repository</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 4: S3 HOSTED PORTFOLIO -->
+                    <article class="project-card glass-panel" data-category="cloud">
+                        <div class="project-header">
+                            <div class="project-cat-pill">AWS Cloud</div>
+                            <h3 class="project-title">Static Portfolio on Amazon S3</h3>
+                        </div>
+                        <p class="project-desc">
+                            Hosted a static portfolio website using Amazon S3, gaining practical experience with cloud storage, AWS regions and static website hosting.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">AWS S3</span>
+                            <span class="tech-pill">HTML</span>
+                            <span class="tech-pill">CSS</span>
+                            <span class="tech-pill">Cloud</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://boopathi--portfolio.s3.us-east-1.amazonaws.com/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                <span>Live on AWS S3</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 5: PROXIMA (SMART GOVERNANCE IDEA) -->
+                    <article class="project-card glass-panel idea-card" data-category="ideas">
+                        <div class="project-header">
+                            <div class="project-cat-pill idea-pill">💡 SIH / Smart Governance Concept</div>
+                            <h3 class="project-title">PROXIMA / LA-EWS</h3>
+                        </div>
+                        <p class="project-desc">
+                            An SIH-style land acquisition delay early-warning concept designed to predict potential delays 45–90 days in advance using Low, Medium, High and Critical risk levels with a GIS dashboard.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">AI/ML Concept</span>
+                            <span class="tech-pill">GIS</span>
+                            <span class="tech-pill">Prediction</span>
+                            <span class="tech-pill">Dashboard</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-sm btn-primary open-modal-btn" id="openProximaModalBtn">
+                                <span>Explore Concept Architecture</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             RECENT ACHIEVEMENTS & JOURNEY SECTION
+             ============================================================== -->
+        <section class="section achievements-section" id="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 04. LEARNING MILESTONES</span>
+                    <h2 class="section-title">DevOps Journey &amp; Achievements</h2>
+                    <p class="section-subtitle">A documented path of consistent hands-on building and problem solving.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <!-- Milestone 1 -->
+                    <div class="timeline-step glass-panel">
+                        <div class="step-indicator">
+                            <span class="step-dot"></span>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-badge">PRACTICE TIMELINE</div>
+                            <h3>10+ Days of Hands-on Cloud &amp; DevOps Practice</h3>
+                            <p>Structured daily exploration progressing step-by-step from foundational source control to orchestrating distributed clusters.</p>
+                            
+                            <div class="progression-pipeline">
+                                <span class="pipe-node">Git</span>
+                                <span class="pipe-arrow">→</span>
+                                <span class="pipe-node">Docker</span>
+                                <span class="pipe-arrow">→</span>
+                                <span class="pipe-node">Docker Compose</span>
+                                <span class="pipe-arrow">→</span>
+                                <span class="pipe-node">Jenkins</span>
+                                <span class="pipe-arrow">→</span>
+                                <span class="pipe-node">Terraform</span>
+                                <span class="pipe-arrow">→</span>
+                                <span class="pipe-node">AWS</span>
+                                <span class="pipe-arrow">→</span>
+                                <span class="pipe-node">Kubernetes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-step glass-panel">
+                        <div class="step-indicator">
+                            <span class="step-dot"></span>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-badge">CONTAINER ORCHESTRATION</div>
+                            <h3>Kubernetes Practice</h3>
+                            <p>Implemented hands-on microservice architecture and container management locally and on cloud environments.</p>
+                            <div class="tech-tag-row">
+                                <span class="chip">Minikube</span>
+                                <span class="chip">Pods</span>
+                                <span class="chip">Deployments</span>
+                                <span class="chip">Services</span>
+                                <span class="chip">NodePort</span>
+                                <span class="chip">Scaling Workloads</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="timeline-step glass-panel">
+                        <div class="step-indicator">
+                            <span class="step-dot"></span>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-badge">CONTINUOUS INTEGRATION</div>
+                            <h3>Jenkins + Docker + GitHub Workflow</h3>
+                            <p>Built automated delivery pipelines that trigger on code push, build isolated Docker container images, and publish artifacts.</p>
+                            <div class="tech-tag-row">
+                                <span class="chip">GitHub Integration</span>
+                                <span class="chip">Jenkins Jobs</span>
+                                <span class="chip">Docker Image Builds</span>
+                                <span class="chip">GHCR Publishing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="timeline-step glass-panel">
+                        <div class="step-indicator">
+                            <span class="step-dot"></span>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-badge">CORE FOUNDATIONS</div>
+                            <h3>Problem Solving &amp; Algorithms</h3>
+                            <p>Actively practicing programming and coding problems, including accepted LeetCode solutions, keeping algorithmic thinking sharp in C, C++, and Python.</p>
+                            <div class="tech-tag-row">
+                                <span class="chip">C &amp; C++</span>
+                                <span class="chip">Python</span>
+                                <span class="chip">Accepted LeetCode Solutions</span>
+                                <span class="chip">Data Structures</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             CERTIFICATIONS SECTION
+             ============================================================== -->
+        <section class="section cert-section" id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 05. CREDENTIALS</span>
+                    <h2 class="section-title">Verified Certifications</h2>
+                    <p class="section-subtitle">Official coursework and foundational certifications completed from AWS Academy and Cisco.</p>
+                </div>
+
+                <div class="cert-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass-panel">
+                        <div class="cert-icon-wrap aws-glow">☁️</div>
+                        <div class="cert-content">
+                            <span class="cert-meta">AWS ACADEMY • 2025</span>
+                            <h3 class="cert-title">AWS Academy Cloud Foundation</h3>
+                            <p class="cert-text">Foundations of AWS cloud computing, global infrastructure, security best practices, and core compute/storage/networking services.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass-panel">
+                        <div class="cert-icon-wrap ai-glow">🤖</div>
+                        <div class="cert-content">
+                            <span class="cert-meta">AWS ACADEMY • 2025</span>
+                            <h3 class="cert-title">AWS Academy Graduate — Generative AI Foundation</h3>
+                            <p class="cert-text">Foundational concepts in artificial intelligence, generative models, prompt engineering, and cloud AI application deployment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="cert-card glass-panel">
+                        <div class="cert-icon-wrap linux-glow">🐧</div>
+                        <div class="cert-content">
+                            <span class="cert-meta">CISCO • 2025</span>
+                            <h3 class="cert-title">Linux Unhatched</h3>
+                            <p class="cert-text">Linux terminal operations, file systems, permissions, package management, and system administration fundamentals essential for DevOps.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="cert-card glass-panel">
+                        <div class="cert-icon-wrap net-glow">🌐</div>
+                        <div class="cert-content">
+                            <span class="cert-meta">CISCO • 2025</span>
+                            <h3 class="cert-title">Networking Basics</h3>
+                            <p class="cert-text">Networking protocols, IP addressing, subnets, routers, switches, and connectivity concepts that form the backbone of cloud architectures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             EXPERIENCE SECTION
+             ============================================================== -->
+        <section class="section exp-section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 06. PRACTICAL EXPERIENCE</span>
+                    <h2 class="section-title">Industry Internship</h2>
+                </div>
+
+                <div class="exp-card glass-panel">
+                    <div class="exp-top">
+                        <div class="exp-role-group">
+                            <h3 class="exp-role">Backend Development Intern</h3>
+                            <div class="exp-company">TRIOS TECHNOLOGIES PVT. LTD.</div>
+                        </div>
+                        <div class="exp-date-group">
+                            <span class="exp-badge">June 2025</span>
+                            <span class="exp-location">📍 Chennai, India</span>
+                        </div>
+                    </div>
+
+                    <p class="exp-description">
+                        Developed backend features, optimized database operations and supported reliable transaction handling in a real-world application.
+                    </p>
+
+                    <div class="exp-tags-row">
+                        <span class="tag">Backend Engineering</span>
+                        <span class="tag">Database Optimization</span>
+                        <span class="tag">Transaction Handling</span>
+                        <span class="tag">API Integration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             CONTACT / CTA SECTION
+             ============================================================== -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="cta-banner glass-panel">
+                    <div class="cta-glow-effect" aria-hidden="true"></div>
+                    
+                    <span class="cta-tag">// GET IN TOUCH</span>
+                    <h2 class="cta-headline">Let's build the next thing.</h2>
+                    <p class="cta-text">
+                        Open to internships, projects, learning opportunities and conversations around Cloud, DevOps and software development.
+                    </p>
+
+                    <div class="cta-actions">
+                        <a href="mailto:boopathiboo142@gmail.com" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>Email Me</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/boopathi-u-19a1a9360" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <span>LinkedIn</span>
+                        </a>
+
+                        <a href="https://github.com/boopathi-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+
+                    <div class="cta-direct-email">
+                        <span>Direct: </span>
+                        <code id="emailText">boopathiboo142@gmail.com</code>
+                        <button class="copy-email-btn" id="copyEmailBtn" title="Copy email address">
+                            <span class="copy-label">Copy</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==============================================================
+         FOOTER
+         ============================================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-name">BOOPATHI U</span>
+                <span class="footer-dot">•</span>
+                <span class="footer-text">Designed &amp; built with HTML · CSS · JavaScript</span>
+            </div>
+            <div class="footer-right">
+                <button class="back-to-top" id="backToTop" aria-label="Back to top of page">
+                    <span>Back to top</span>
+                    <span class="top-arrow">↑</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==============================================================
+         PROXIMA / LA-EWS CONCEPT MODAL
+         ============================================================== -->
+    <div class="modal-backdrop" id="proximaModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-dialog glass-panel">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-tag">SMART GOVERNANCE PROJECT CONCEPT</span>
+                    <h3 class="modal-title" id="modalTitle">PROXIMA / LA-EWS</h3>
+                    <p class="modal-subtitle">Land Acquisition Delay Early-Warning System (SIH Concept)</p>
+                </div>
+                <button class="modal-close" id="closeProximaModalBtn" aria-label="Close modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="concept-disclaimer">
+                    <span class="alert-icon">ℹ️</span>
+                    <span>Note: This is an architectural proposal &amp; concept for national hackathons/smart governance, designed to predict administrative bottlenecks.</span>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Core Concept</h4>
+                    <p>
+                        Designed to predict potential land acquisition delays <strong>45–90 days in advance</strong> by monitoring procedural milestones across departments, flagging risks before project schedules slip.
+                    </p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Risk Levels &amp; Alert Hierarchy</h4>
+                    <div class="risk-grid">
+                        <div class="risk-card risk-low">
+                            <span class="risk-badge">LOW</span>
+                            <p>On track. Procedural milestones met within expected SLA.</p>
+                        </div>
+                        <div class="risk-card risk-med">
+                            <span class="risk-badge">MEDIUM</span>
+                            <p>Minor delay in inter-department survey or filing.</p>
+                        </div>
+                        <div class="risk-card risk-high">
+                            <span class="risk-badge">HIGH</span>
+                            <p>Bottleneck detected; potential 30+ day delay forecast.</p>
+                        </div>
+                        <div class="risk-card risk-critical">
+                            <span class="risk-badge">CRITICAL</span>
+                            <p>Imminent 45–90 day stall; automated escalation to directors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Target Stakeholders / Users</h4>
+                    <div class="stakeholder-tags">
+                        <span class="chip">DRO (District Revenue Officer)</span>
+                        <span class="chip">CALA (Competent Authority for Land Acquisition)</span>
+                        <span class="chip">Tahsildars</span>
+                        <span class="chip">Project Directors</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Key Features &amp; Technical Vision</h4>
+                    <ul class="modal-feature-list">
+                        <li><strong>Early Warning System:</strong> Predictive notifications alerting officers to high-risk bottlenecks.</li>
+                        <li><strong>GIS Interactive Dashboard:</strong> Spatial visualization of project parcels and acquisition phases.</li>
+                        <li><strong>Multilingual Accessibility:</strong> Seamless localized interface in English, Tamil, and Hindi.</li>
+                        <li><strong>Predictive Analytics:</strong> Pattern analysis on legal objections, valuation delays, and payout timelines.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary modal-close-btn" id="modalDismissBtn">Close Concept</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification for Copy -->
+    <div class="toast" id="toastNotification" aria-live="polite">Email copied to clipboard!</div>
+
+    <!-- Main Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
